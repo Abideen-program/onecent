@@ -49,7 +49,7 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="border border-red-400 bg-[#000000] w-full h-scree text-[#FFFFFF] flex flex-col gap-4 max-w-xl p-6">
+      <div className="border border-red-400 bg-[#000000] w-full h-screen text-[#FFFFFF] flex flex-col gap-4 max-w-xl p-6">
         <div className="z-30 flex items-center justify-between">
           <div className="flex items-center space-x-1">
             <img src={iconImages.CentLogo} alt="logo" />
