@@ -49,7 +49,7 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="bg-[#000000] w-full h-screen text-[#FFFFFF] flex flex-col gap-4 max-w-xl p-6">
+      <div className="bg-[#000000] w-full h-screen text-[#FFFFFF] flex flex-col gap-4 max-w-xl px-6 py-2">
         <div className="z-30 flex items-center justify-between">
           <div className="flex items-center space-x-1">
             <img src={iconImages.CentLogo} alt="logo" />
@@ -69,8 +69,8 @@ const Home = () => {
           <div className="text-lg flex items-center justify-between">
             <p className="font-thin">{levelNames[levelIndex]}</p>
             <p className="flex items-center gap-2">
-              <span className="font-thin">Level</span>
-              <span className="font-medium">
+              <span className="text-sm font-thin">Level</span>
+              <span className="text-sm font-medium">
                 {levelIndex + 1} / {levelNames.length}
               </span>
             </p>
@@ -88,7 +88,7 @@ const Home = () => {
 
         <div className="flex flex-col gap-4">
           <div className="flex flex-col items-center mx-auto">
-            <p className="text-lg font-thin">Total CENT Points</p>
+            <p className="text-sm font-thin">Total CENT Points</p>
             <div className="flex items-center justify-between gap-1">
               <img src={iconImages.Cent} alt="cent" className="" />
               <p className="font-extrabold text-[25px] mb-1">
