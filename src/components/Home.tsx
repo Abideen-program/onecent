@@ -49,7 +49,7 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="bg-[#000000] border w-full h-screen text-[#FFFFFF] flex flex-col gap-3 max-w-xl px-6 py-2">
+      <div className="bg-[#000000] border w-full h-screen text-[#FFFFFF] flex flex-col gap-[14px] max-w-xl px-6 py-2">
         <div className="z-30 flex items-center justify-between">
           <div className="flex items-center space-x-1">
             <img src={iconImages.CentLogo} alt="logo" />
@@ -67,7 +67,7 @@ const Home = () => {
 
         <div className="flex flex-col w-full mt-2">
           <div className="text-lg flex items-center justify-between">
-            <p className="font-thin">{levelNames[levelIndex]}</p>
+            <p className="text-sm font-thin">{levelNames[levelIndex]}</p>
             <p className="flex items-center gap-2">
               <span className="text-sm font-thin">Level</span>
               <span className="text-sm font-medium">
