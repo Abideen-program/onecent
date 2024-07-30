@@ -112,7 +112,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mt-3 flex flex-col gap-14">
+        <div className="mt-3 flex flex-col gap-10">
           <div className="relative mx-auto cursor-pointer">
             <div onClick={handleTapping}>
               <img src={iconImages.TapButton} alt="tap button" className="w-[220px]" />
