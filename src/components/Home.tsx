@@ -49,7 +49,7 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="border border-red-400 bg-[#000000] w-full h-screen text-[#FFFFFF] flex flex-col gap-4 max-w-xl p-6">
+      <div className="bg-[#000000] w-full h-screen text-[#FFFFFF] flex flex-col gap-4 max-w-xl p-6">
         <div className="z-30 flex items-center justify-between">
           <div className="flex items-center space-x-1">
             <img src={iconImages.CentLogo} alt="logo" />
@@ -115,10 +115,10 @@ const Home = () => {
         <div className="mt-3 flex flex-col gap-14">
           <div className="relative mx-auto cursor-pointer">
             <div onClick={handleTapping}>
-              <img src={iconImages.TapButton} alt="tap button" className="" />
+              <img src={iconImages.TapButton} alt="tap button" className="w-[220px]" />
             </div>
 
-            <div className="absolute right-0 flex items-center gap-1">
+            <div className="absolute -bottom-10 right-0 flex items-center gap-1">
               <img src={iconImages.Trophy} className="w-7" alt="battery" />
               <p className="text-sm font-bold">RANK</p>
             </div>
