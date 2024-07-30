@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #000000;
+}
+
+.progress-gradient {
+  background: linear-gradient(to right, #f3581e, #fbf6a0);
+}
