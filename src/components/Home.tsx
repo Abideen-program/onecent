@@ -118,7 +118,7 @@ const Home = () => {
               <img src={iconImages.TapButton} alt="tap button" className="w-[220px]" />
             </div>
 
-            <div className="absolute -bottom-10 right-0 flex items-center gap-1">
+            <div className="absolute -bottom-10 -right-5 flex items-center gap-1">
               <img src={iconImages.Trophy} className="w-7" alt="battery" />
               <p className="text-sm font-bold">RANK</p>
             </div>
