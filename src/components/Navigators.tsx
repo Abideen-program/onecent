@@ -7,7 +7,7 @@ const Navigators = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className="mt-auto flex items-center justify-between">
+    <div className="mt-auto flex items-center justify-between absolute right-6 left-6  bottom-0">
       <div className="flex flex-col items-center gap-1">
         <Link to="/">
           <motion.div
