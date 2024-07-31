@@ -27,7 +27,7 @@ const Home = () => {
 
   const handleTapping = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
+    const rect = card.getBoundingClientRect(); //returns an object with properties like top, left, width, and height
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
     card.style.transform = `perspective(1000px) rotateX(${
@@ -45,6 +45,10 @@ const Home = () => {
       setLevelIndex((prevValue) => prevValue + 1);
       setPointsToAdd((prevValue) => prevValue + 1);
     }
+  };
+
+  const handleAnimationClicks = (id: number) => {
+    setClicks((prevClicks) => prevClicks.filter((click) => click.id !== id));
   };
 
   return (
@@ -115,7 +119,7 @@ const Home = () => {
         <div className="flex flex-col gap-10">
           <div className="relative mx-auto cursor-pointer">
             <div onClick={handleTapping}>
-              <img src={iconImages.TapButton} alt="tap button"/>
+              <img src={iconImages.TapButton} alt="tap button" />
             </div>
 
             <div className="absolute -bottom-10 -right-1 flex items-center gap-1">
@@ -143,6 +147,21 @@ const Home = () => {
         </div>
 
         <Navigators />
+
+        {clicks.map((click) => (
+          <div
+            key={click.id}
+            className="absolute text-4xl font-bold opacity-0 text-white pointer-events-none"
+            style={{
+              top: `${click.y - 50}px`,
+              left: `${click.x - 28}px`,
+              animation: `float 1s ease-out`,
+            }}
+            onAnimationEnd={() => handleAnimationClicks(click.id)}
+          >
+            +{pointsToAdd}
+          </div>
+        ))}
       </div>
     </div>
   );

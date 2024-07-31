@@ -22,3 +22,15 @@ body {
 .progress-gradient {
   background: linear-gradient(to right, #f3581e, #fbf6a0);
 }
+
+@keyframes float {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
