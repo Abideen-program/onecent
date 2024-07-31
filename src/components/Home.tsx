@@ -49,7 +49,7 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="bg-[#000000] w-full h-screen text-[#FFFFFF] flex flex-col gap-[14px] max-w-xl px-6 py-2 relative">
+      <div className="bg-[#000000] w-full h-screen text-[#FFFFFF] flex flex-col gap-3 max-w-xl px-6 py-2 relative">
         <div className="z-30 flex items-center justify-between">
           <div className="flex items-center space-x-1">
             <img src={iconImages.CentLogo} alt="logo" />
@@ -86,7 +86,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3">
           <div className="flex flex-col items-center mx-auto">
             <p className="text-sm font-thin">Total CENT Points</p>
             <div className="flex items-center justify-between gap-1">
@@ -112,7 +112,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mt-3 flex flex-col gap-10">
+        <div className="flex flex-col gap-10">
           <div className="relative mx-auto cursor-pointer">
             <div onClick={handleTapping}>
               <img src={iconImages.TapButton} alt="tap button"/>
