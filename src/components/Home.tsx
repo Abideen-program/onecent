@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { iconImages } from "../utilities/images";
@@ -6,15 +6,18 @@ import { levelNames, levelMinPoints } from "../utilities/DummyData";
 import Navigators from "./Navigators";
 
 const Home = () => {
-  const [levelIndex, setLevelIndex] = useState(0);
-  const [points, setPoints] = useState(4500);
-  const [pointsToAdd, setPointsToAdd] = useState(5);
+  const [levelIndex, setLevelIndex] = useState<number>(0);
+  const [points, setPoints] = useState<number>(0);
+  const [energy, setEnergy] = useState<number>(1000);
+  const [totalEnergy, setTotalEnergy] = useState<number>(1000);
+  const [pointsToAdd, setPointsToAdd] = useState<number>(1);
+  const [energySpeed, setEnergySpeed] = useState<number>(1);
 
   const [clicks, setClicks] = useState<{ id: number; x: number; y: number }[]>(
     []
   );
 
-  const calculateProgress = () => {
+  const calculateProgress = (): number => {
     if (levelIndex >= levelNames.length - 1) {
       return 100;
     }
@@ -26,30 +29,45 @@ const Home = () => {
   };
 
   const handleTapping = (e: React.MouseEvent<HTMLDivElement>) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect(); //returns an object with properties like top, left, width, and height
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    card.style.transform = `perspective(1000px) rotateX(${
-      -y / 10
-    }deg) rotateY(${x / 10}deg)`;
+    if (energy > pointsToAdd) {
+      const card = e.currentTarget;
+      const rect = card.getBoundingClientRect(); //returns an object with properties like top, left, width, and height
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      card.style.transform = `perspective(1000px) rotateX(${
+        -y / 10
+      }deg) rotateY(${x / 10}deg)`;
 
-    setTimeout(() => {
-      card.style.transform = "";
-    }, 100);
+      setTimeout(() => {
+        card.style.transform = "";
+      }, 100);
 
-    setPoints(points + pointsToAdd);
-    setClicks([...clicks, { id: Date.now(), x: e.pageX, y: e.pageY }]);
+      setPoints(points + pointsToAdd);
+      setClicks([...clicks, { id: Date.now(), x: e.pageX, y: e.pageY }]);
 
-    if (points === levelMinPoints[levelIndex + 1]) {
-      setLevelIndex((prevValue) => prevValue + 1);
-      setPointsToAdd((prevValue) => prevValue + 1);
+      setEnergy((prevValue) => prevValue - pointsToAdd);
+
+      if (points >= levelMinPoints[levelIndex + 1]) {
+        setLevelIndex((prevValue) => prevValue + 1);
+        setPointsToAdd((prevValue) => prevValue + 1);
+        setTotalEnergy((prevValue) => prevValue + 500);
+      }
     }
   };
 
-  const handleAnimationClicks = (id: number) => {
+  const handleAnimationClicks = (id: number): void => {
     setClicks((prevClicks) => prevClicks.filter((click) => click.id !== id));
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (energy < totalEnergy) {
+        setEnergy((preValue) => preValue + energySpeed);
+      }
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [energy, totalEnergy]);
 
   return (
     <div className="flex justify-center">
@@ -109,7 +127,9 @@ const Home = () => {
             <div className="flex flex-col ml-auto">
               <p className="text-sm font-thin">CENT to level up</p>
               <p className="text-sm font-bold">
-                {(levelMinPoints[levelIndex + 1] - points).toLocaleString()}
+                {levelMinPoints[levelIndex + 1] - points > 0
+                  ? (levelMinPoints[levelIndex + 1] - points).toLocaleString()
+                  : 0}
               </p>
             </div>
             <div></div>
@@ -132,7 +152,9 @@ const Home = () => {
             <div className="w-[80%] mx-auto flex items-center justify-between">
               <div className="flex items-center">
                 <img src={iconImages.Battery} className="w-7" alt="battery" />
-                <p className="text-sm font-normal">1200/1500</p>
+                <p className="text-sm font-normal">
+                  {energy < totalEnergy ? energy : totalEnergy}/{totalEnergy}
+                </p>
               </div>
 
               <motion.div
