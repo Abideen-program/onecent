@@ -113,7 +113,7 @@ const Home = () => {
             <p className="text-sm font-thin">Total CENT Points</p>
             <div className="flex items-center justify-between gap-1">
               <img src={iconImages.Cent} alt="cent" className="" />
-              <p className="font-extrabold text-[25px] mb-1">
+              <p className="font-extrabold text-[25px]">
                 {points.toLocaleString()}
               </p>
             </div>
