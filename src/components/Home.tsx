@@ -11,7 +11,7 @@ const Home = () => {
   const [energy, setEnergy] = useState<number>(1000);
   const [totalEnergy, setTotalEnergy] = useState<number>(1000);
   const [pointsToAdd, setPointsToAdd] = useState<number>(1);
-  const [energySpeed, setEnergySpeed] = useState<number>(1);
+  const [energySpeed] = useState<number>(1);
 
   const [clicks, setClicks] = useState<{ id: number; x: number; y: number }[]>(
     []
