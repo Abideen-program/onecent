@@ -148,7 +148,7 @@ const Home = () => {
         <div className="flex flex-col gap-10">
           <div className="relative mx-auto cursor-pointer">
             <div onClick={handleTapping}>
-              <img src={iconImages.TapButton} alt="tap button" />
+              <img loading="lazy" src={iconImages.TapButton} alt="tap button" />
             </div>
 
             <div className="absolute -bottom-10 -right-1 flex items-center gap-1">
