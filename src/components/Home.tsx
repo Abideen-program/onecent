@@ -6,23 +6,24 @@ import { levelNames, levelMinPoints } from "../utilities/DummyData";
 import Navigators from "./Navigators";
 
 const Home = () => {
-  const [levelIndex, setLevelIndex] = useState<number>(0);
-  const [points, setPoints] = useState<number>(0);
-  const [energy, setEnergy] = useState<number>(1000);
-  const [totalEnergy, setTotalEnergy] = useState<number>(1000);
-  const [pointsToAdd, setPointsToAdd] = useState<number>(1);
-  const [energySpeed] = useState<number>(1);
+  const [levelIndex, setLevelIndex] = useState<number>(0); //Holds the level number of the user
+  const [points, setPoints] = useState<number>(4060); //TOtal accumulate points by the user
+  const [energy, setEnergy] = useState<number>(1000); //Current energy level of the user
+  const [totalEnergy, setTotalEnergy] = useState<number>(1000); //Current total energy level of the user
+  const [pointsToAdd, setPointsToAdd] = useState<number>(111); //Points to be added on each click.
+  const [energySpeed] = useState<number>(1); // The rate at which the user energy bar filled up.
 
   const [clicks, setClicks] = useState<{ id: number; x: number; y: number }[]>(
     []
-  );
+  ); //Store each clicks by the user
 
   const calculateProgress = (): number => {
+    //This is a function to calculate the progress bar.
     if (levelIndex >= levelNames.length - 1) {
       return 100;
     }
-    const currentLevelMin = levelMinPoints[levelIndex];
-    const nextLevelMin = levelMinPoints[levelIndex + 1];
+    const currentLevelMin = levelMinPoints[levelIndex]; // minimum point for the user current level
+    const nextLevelMin = levelMinPoints[levelIndex + 1]; // minimum point need for the user to proceed to next level
     const progress =
       ((points - currentLevelMin) / (nextLevelMin - currentLevelMin)) * 100;
     return Math.min(progress, 100);
@@ -46,28 +47,35 @@ const Home = () => {
       setClicks([...clicks, { id: Date.now(), x: e.pageX, y: e.pageY }]);
 
       setEnergy((prevValue) => prevValue - pointsToAdd);
-
-      if (points >= levelMinPoints[levelIndex + 1]) {
-        setLevelIndex((prevValue) => prevValue + 1);
-        setPointsToAdd((prevValue) => prevValue + 1);
-        setTotalEnergy((prevValue) => prevValue + 500);
-      }
     }
   };
 
   const handleAnimationClicks = (id: number): void => {
-    setClicks((prevClicks) => prevClicks.filter((click) => click.id !== id));
+    setClicks((prevClicks) => prevClicks.filter((click) => click.id !== id)); // Helps in clearing clicks array
   };
 
   useEffect(() => {
+    //This helps in refilling enery level of the user
     const interval = setInterval(() => {
       if (energy < totalEnergy) {
         setEnergy((preValue) => preValue + energySpeed);
       }
-    }, 2000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [energy, totalEnergy]);
+
+  useEffect(() => {
+    const currentLevelMin = levelMinPoints[levelIndex];
+    const nextLevelMin = levelMinPoints[levelIndex + 1];
+    if (points >= nextLevelMin && levelIndex < levelNames.length - 1) {
+      setLevelIndex((prevValue) => prevValue + 1); //increase the levelindex by 1 to go to another stage
+      setPointsToAdd((prevValue) => prevValue + 1); // increase added points on click by 1
+      setTotalEnergy((prevValue) => prevValue + 500); // increase the total
+    } else if (points < currentLevelMin && levelIndex > 0) {
+      setLevelIndex(levelIndex - 1);
+    }
+  }, [points, levelIndex, levelMinPoints, levelNames.length]);
 
   return (
     <div className="flex justify-center">
