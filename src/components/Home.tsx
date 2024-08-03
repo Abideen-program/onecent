@@ -4,14 +4,17 @@ import { motion } from "framer-motion";
 import { iconImages } from "../utilities/images";
 import { levelNames, levelMinPoints } from "../utilities/DummyData";
 import Navigators from "./Navigators";
+import { formatCentToLevelUp } from "../utilities/helpers";
 
 const Home = () => {
   const [levelIndex, setLevelIndex] = useState<number>(0); //Holds the level number of the user
-  const [points, setPoints] = useState<number>(4060); //TOtal accumulate points by the user
+  const [points, setPoints] = useState<number>(0); //TOtal accumulate points by the user
   const [energy, setEnergy] = useState<number>(1000); //Current energy level of the user
   const [totalEnergy, setTotalEnergy] = useState<number>(1000); //Current total energy level of the user
-  const [pointsToAdd, setPointsToAdd] = useState<number>(111); //Points to be added on each click.
+  const [pointsToAdd, setPointsToAdd] = useState<number>(1); //Points to be added on each click.
   const [energySpeed] = useState<number>(1); // The rate at which the user energy bar filled up.
+
+  const POINT_TO_LEVEL_UP = levelMinPoints[levelIndex + 1] - points;
 
   const [clicks, setClicks] = useState<{ id: number; x: number; y: number }[]>(
     []
@@ -135,9 +138,7 @@ const Home = () => {
             <div className="flex flex-col ml-auto">
               <p className="text-sm font-thin">CENT to level up</p>
               <p className="text-sm font-bold">
-                {levelMinPoints[levelIndex + 1] - points > 0
-                  ? (levelMinPoints[levelIndex + 1] - points).toLocaleString()
-                  : 0}
+                {formatCentToLevelUp(POINT_TO_LEVEL_UP)}
               </p>
             </div>
             <div></div>
