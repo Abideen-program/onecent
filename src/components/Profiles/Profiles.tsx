@@ -1,9 +1,13 @@
+import ComingSoon from "../ComingSoon";
 import Navigators from "../Navigators";
 
 export const Profiles = () => {
   return (
-    <div>
-      <Navigators />
+    <div className="flex justify-center">
+      <div className="bg-[#000000] w-full h-screen text-[#FFFFFF] flex flex-col gap-3 max-w-xl px-6 py-2 relative">
+        <ComingSoon />
+        <Navigators />
+      </div>
     </div>
   );
 };
