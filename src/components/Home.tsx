@@ -82,7 +82,7 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="bg-[#000000] w-full h-screen text-[#FFFFFF] flex flex-col gap-3 max-w-xl px-6 py-2 relative">
+      <div className="bg-[#000000] w-full h-full text-[#FFFFFF] flex flex-col gap-3 max-w-xl px-6 py-2 relative">
         <div className="z-30 flex items-center justify-between">
           <div className="flex items-center space-x-1">
             <img src={iconImages.CentLogo} alt="logo" />
@@ -157,7 +157,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="full mt-5">
+          <div className="full mt-5 mb-[95px] md:mb-0">
             <div className="w-[80%] mx-auto flex items-center justify-between">
               <div className="flex items-center">
                 <img src={iconImages.Battery} className="w-7" alt="battery" />

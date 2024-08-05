@@ -7,7 +7,7 @@ const Navigators = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className="mt-auto flex items-center justify-between absolute right-6 left-6  bottom-0">
+    <div className="flex items-center justify-between fixed right-0 left-0 bottom-0 max-w-xl mx-auto px-6 py-2 rounded-md bg-[#111111]">
       <div className="flex flex-col items-center gap-1">
         <Link to="/">
           <motion.div
@@ -59,7 +59,7 @@ const Navigators = () => {
             />
           </motion.div>
         </Link>
-        <p className="text-sm font-medium">Freinds</p>
+        <p className="text-sm font-medium">Friends</p>
       </div>
 
       <div className="flex flex-col items-center gap-1">
@@ -79,7 +79,7 @@ const Navigators = () => {
             />
           </motion.div>
         </Link>
-        <p className="text-sm font-medium">Profiles</p>
+        <p className="text-sm font-medium">Profile</p>
       </div>
     </div>
   );

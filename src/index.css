@@ -17,11 +17,18 @@ body {
 body {
   background-color: #000000;
   height: 100vh;
-  font-family: 'Clash Display', sans-serif;
+  font-family: "Clash Display", sans-serif;
 }
 
 .progress-gradient {
   background: linear-gradient(to right, #f3581e, #fbf6a0);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg,  #f3581e 0%, #fbf6a0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes float {

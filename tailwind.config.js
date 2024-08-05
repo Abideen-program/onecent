@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js, jsx, ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "gradient-to-r": "linear-gradient(to right, #F3581E, #FBF6A0)",
+      },
+    },
     screens: {
       xs: "375px",
       sm: "425px",
@@ -27,5 +31,5 @@ module.exports = {
       // => @media (min-width: 2560px) { ... }
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
 };
