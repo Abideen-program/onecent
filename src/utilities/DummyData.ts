@@ -1,3 +1,5 @@
+import { iconImages } from "./images";
+
 export const levelNames = [
   "Cent Newbie", // From 0 to 4999 coins
   "Silver", // From 5000 coins to 24,999 coins
@@ -22,4 +24,34 @@ export const levelMinPoints = [
   50000000, // Master
   100000000, // GrandMaster
   1000000000, // Lord
+];
+
+export const tasks = [
+  {
+    name: "Buy CENT on ShibaSwap",
+    status: "notStarted",
+    icon: iconImages.Shib,
+  },
+
+  { name: "Follow the Bus", status: "notStarted", icon: iconImages.X },
+
+  { name: "Follow Casey Stubbs", status: "notStarted", icon: iconImages.X },
+
+  {
+    name: "Join our Telegram Channel",
+    status: "notStarted",
+    icon: iconImages.Telegram,
+  },
+
+  { name: "Like and Repost", status: "notStarted", icon: iconImages.X },
+
+  { name: "Follow us on X", status: "notStarted", icon: iconImages.X },
+
+  {
+    name: "Watch Shib Bridging Tutorial",
+    status: "notStarted",
+    icon: iconImages.Youtube,
+  },
+
+  { name: "Tag a Friend", status: "notStarted", icon: iconImages.X },
 ];

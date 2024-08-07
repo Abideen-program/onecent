@@ -13,8 +13,16 @@ import Friends from "../assets/icons/friends.svg";
 import FriendsActive from "../assets/icons/friendsactive.svg";
 import Profile from "../assets/icons/profile.svg";
 import ProfileActive from "../assets/icons/profileActive.svg";
+import Shib from "../assets/icons/shib.svg";
+import X from "../assets/icons/x.svg";
+import Telegram from "../assets/icons/telegram.svg";
+import Youtube from "../assets/icons/youtube.svg";
 
 export const iconImages = {
+  Youtube,
+  X,
+  Telegram,
+  Shib,
   Game,
   GameActive,
   Task,

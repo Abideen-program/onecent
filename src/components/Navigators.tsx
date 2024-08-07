@@ -12,7 +12,7 @@ const Navigators = () => {
         <Link to="/">
           <motion.div
             whileTap={{ scale: 0.9 }}
-            className={`w-[55px] h-[55px] rounded-lg flex items-center justify-center bg-[#222222]`}
+            className={`w-[40px] h-[40px] rounded-lg flex items-center justify-center bg-[#222222]`}
           >
             <img
               src={pathname === "/" ? iconImages.GameActive : iconImages.Game}
@@ -21,14 +21,14 @@ const Navigators = () => {
             />
           </motion.div>
         </Link>
-        <p className="text-sm font-medium">Play</p>
+        <p className="text-xs font-medium">Play</p>
       </div>
 
       <div className="flex flex-col items-center gap-1">
         <Link to="/tasks">
           <motion.div
             whileTap={{ scale: 0.9 }}
-            className={`w-[55px] h-[55px] rounded-lg flex items-center justify-center bg-[#222222]`}
+            className={`w-[40px] h-[40px] rounded-lg flex items-center justify-center bg-[#222222]`}
           >
             <img
               src={
@@ -39,14 +39,14 @@ const Navigators = () => {
             />
           </motion.div>
         </Link>
-        <p className="text-sm font-medium">Tasks</p>
+        <p className="text-xs font-medium">Tasks</p>
       </div>
 
       <div className="flex flex-col items-center gap-1">
         <Link to="/friends">
           <motion.div
             whileTap={{ scale: 0.9 }}
-            className={`w-[55px] h-[55px] rounded-lg flex items-center justify-center bg-[#222222]`}
+            className={`w-[40px] h-[40px] rounded-lg flex items-center justify-center bg-[#222222]`}
           >
             <img
               src={
@@ -59,14 +59,14 @@ const Navigators = () => {
             />
           </motion.div>
         </Link>
-        <p className="text-sm font-medium">Friends</p>
+        <p className="text-xs font-medium">Friends</p>
       </div>
 
       <div className="flex flex-col items-center gap-1">
         <Link to="/profiles">
           <motion.div
             whileTap={{ scale: 0.9 }}
-            className={`w-[55px] h-[55px] rounded-lg flex items-center justify-center bg-[#222222]`}
+            className={`w-[40px] h-[40px] rounded-lg flex items-center justify-center bg-[#222222]`}
           >
             <img
               src={
@@ -79,7 +79,7 @@ const Navigators = () => {
             />
           </motion.div>
         </Link>
-        <p className="text-sm font-medium">Profile</p>
+        <p className="text-xs font-medium">Profile</p>
       </div>
     </div>
   );
