@@ -17,8 +17,10 @@ import Shib from "../assets/icons/shib.svg";
 import X from "../assets/icons/x.svg";
 import Telegram from "../assets/icons/telegram.svg";
 import Youtube from "../assets/icons/youtube.svg";
+import Checked from "../assets/icons/checked.svg";
 
 export const iconImages = {
+  Checked,
   Youtube,
   X,
   Telegram,

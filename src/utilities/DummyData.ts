@@ -28,30 +28,66 @@ export const levelMinPoints = [
 
 export const tasks = [
   {
+    id: 1,
     name: "Buy CENT on ShibaSwap",
     status: "notStarted",
     icon: iconImages.Shib,
+    point: 500,
   },
 
-  { name: "Follow the Bus", status: "notStarted", icon: iconImages.X },
-
-  { name: "Follow Casey Stubbs", status: "notStarted", icon: iconImages.X },
+  {
+    id: 2,
+    name: "Follow the Bus",
+    status: "notStarted",
+    icon: iconImages.X,
+    point: 1000,
+  },
 
   {
+    id: 3,
+    name: "Follow Casey Stubbs",
+    status: "notStarted",
+    icon: iconImages.X,
+    point: 1000,
+  },
+
+  {
+    id: 4,
     name: "Join our Telegram Channel",
     status: "notStarted",
     icon: iconImages.Telegram,
+    point: 1500,
   },
 
-  { name: "Like and Repost", status: "notStarted", icon: iconImages.X },
-
-  { name: "Follow us on X", status: "notStarted", icon: iconImages.X },
+  {
+    id: 5,
+    name: "Like and Repost",
+    status: "notStarted",
+    icon: iconImages.X,
+    point: 500,
+  },
 
   {
+    id: 6,
+    name: "Follow us on X",
+    status: "notStarted",
+    icon: iconImages.X,
+    point: 1500,
+  },
+
+  {
+    id: 7,
     name: "Watch Shib Bridging Tutorial",
     status: "notStarted",
     icon: iconImages.Youtube,
+    point: 1000,
   },
 
-  { name: "Tag a Friend", status: "notStarted", icon: iconImages.X },
+  {
+    id: 8,
+    name: "Tag a Friend",
+    status: "notStarted",
+    icon: iconImages.X,
+    point: 500,
+  },
 ];
