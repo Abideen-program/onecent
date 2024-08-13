@@ -82,7 +82,7 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="bg-[#000000] w-full h-full text-[#FFFFFF] flex flex-col gap-3 max-w-xl p-6 relative scrollbar-none">
+      <div className="bg-[#000000] w-full h-full text-[#FFFFFF] flex flex-col max-w-xl p-6  relative scrollbar-none bg-[url('/images/bg.png')] bg-fixed bg-no-repeat bg-center bg-cover">
         <div className="z-30 flex items-center justify-between">
           <div className="flex items-center space-x-1">
             <img src={iconImages.CentLogo} alt="logo" />

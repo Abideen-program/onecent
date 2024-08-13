@@ -32,11 +32,9 @@ const Tasks = () => {
     setPoints((prevValue) => prevValue + point);
   };
 
-  console.log(allTasks);
-
   return (
     <div className="flex justify-center">
-      <div className="bg-[#000000] w-full h-full text-[#FFFFFF] flex flex-col max-w-xl p-6  relative scrollbar-none">
+      <div className="bg-[#000000] w-full h-full text-[#FFFFFF] flex flex-col max-w-xl p-6  relative scrollbar-none bg-[url('/images/bg.png')] bg-fixed bg-no-repeat bg-center bg-cover">
         <div className="flex flex-col gap-8 mb-[95px]">
           <div className="flex flex-col items-center gap-1 mx-auto">
             <p className="text-sm font-thin">Total CENT Points</p>
