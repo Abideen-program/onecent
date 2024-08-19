@@ -16,21 +16,22 @@ body {
 }
 
 body {
-  /* background-color: #000000; */
+  background-color: #000000;
   height: 100vh;
   font-family: "Clash Display", sans-serif;
 }
 
 .progress-gradient {
-  background: linear-gradient(to right, #f3581e, #fbf6a0);
+  background: linear-gradient(90.73deg, #f3581e 0.82%, #fbf6a0 111.37%);
 }
 
 .gradient-text {
-  background: linear-gradient(90.73deg, #F3581E 0.82%, #FBF6A0 111.37%);
+  background: linear-gradient(90.73deg, #f3581e 0.82%, #fbf6a0 111.37%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 @keyframes float {
   0% {

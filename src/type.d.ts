@@ -7,3 +7,8 @@ interface task {
   handleStart: (id: number) => any;
   handleClaim: (id: number, point: number) => any;
 }
+
+interface friend {
+  name: string;
+  level: string;
+}

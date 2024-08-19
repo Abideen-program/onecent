@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-to-r": "linear-gradient(to right, #F3581E, #FBF6A0)",
+        "custom-gradient":
+          "linear-gradient(90.73deg, #f3581e 0.82%, #fbf6a0 111.37%)",
       },
     },
     screens: {

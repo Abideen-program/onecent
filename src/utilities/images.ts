@@ -18,8 +18,16 @@ import X from "../assets/icons/x.svg";
 import Telegram from "../assets/icons/telegram.svg";
 import Youtube from "../assets/icons/youtube.svg";
 import Checked from "../assets/icons/checked.svg";
+import FriendIcon from "../assets/icons/friend-icon.svg";
+import Gift from "../assets/icons/gift.svg";
+import Samuri from "../assets/icons/samuri.svg";
+import Copy from "../assets/icons/copy.svg";
 
 export const iconImages = {
+  Copy,
+  Samuri,
+  Gift,
+  FriendIcon,
   Checked,
   Youtube,
   X,
