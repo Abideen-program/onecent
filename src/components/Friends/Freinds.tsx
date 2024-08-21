@@ -17,7 +17,7 @@ const Freinds = () => {
           <div className="flex flex-col gap-3">
             <div className="flex flex-col items-center justify-center gap-1">
               <h1 className="font-bold text-xl">Invite Friends</h1>
-              <p className="text-[11px] font-light">
+              <p className="text-[12px] font-light">
                 Invite your friends and you earn some more CENTs
               </p>
             </div>
@@ -63,7 +63,7 @@ const Freinds = () => {
               <div className="flex items-center justify-between">
                 <motion.button
                   whileTap={{ scale: 0.95 }}
-                  className="text-sm font-semibold w-[80%] px-[10px] py-2 border rounded-lg bg-custom-gradient"
+                  className="text-sm font-semibold w-[80%] px-[10px] py-2 rounded-lg bg-custom-gradient"
                 >
                   Invite A Friend
                 </motion.button>

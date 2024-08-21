@@ -20,10 +20,26 @@ import Youtube from "../assets/icons/youtube.svg";
 import Checked from "../assets/icons/checked.svg";
 import FriendIcon from "../assets/icons/friend-icon.svg";
 import Gift from "../assets/icons/gift.svg";
+import BigSamuri from "../assets/icons/bigsamuri.svg";
 import Samuri from "../assets/icons/samuri.svg";
 import Copy from "../assets/icons/copy.svg";
+import Camera from "../assets/icons/camera.svg";
+import Bell from "../assets/icons/Bell.svg";
+import Language from "../assets/icons/language.svg";
+import Sound from "../assets/icons/sound.svg";
+import Toggle from "../assets/icons/Toggle.svg";
+import ArrowRight from "../assets/icons/rightarrow.svg";
+import Read from "../assets/icons/read.svg";
 
 export const iconImages = {
+  Read,
+  ArrowRight,
+  Bell,
+  Language,
+  Sound,
+  Toggle,
+  Camera,
+  BigSamuri,
   Copy,
   Samuri,
   Gift,

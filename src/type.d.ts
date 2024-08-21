@@ -12,3 +12,10 @@ interface friend {
   name: string;
   level: string;
 }
+
+interface ProfileItem {
+  leftIcon: any;
+  name: string;
+  rightIcon: any;
+  alias?: string;
+}
