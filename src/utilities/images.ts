@@ -30,8 +30,10 @@ import Sound from "../assets/icons/sound.svg";
 import Toggle from "../assets/icons/Toggle.svg";
 import ArrowRight from "../assets/icons/rightarrow.svg";
 import Read from "../assets/icons/read.svg";
+import Check from "../assets/icons/check.svg";
 
 export const iconImages = {
+  Check,
   Read,
   ArrowRight,
   Bell,

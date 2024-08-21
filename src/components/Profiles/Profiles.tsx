@@ -56,6 +56,7 @@ const Profiles = () => {
                 leftIcon={iconImages.Language}
                 name="Language"
                 rightIcon={iconImages.ArrowRight}
+                href="/languages"
               />
             </div>
 
@@ -66,11 +67,13 @@ const Profiles = () => {
                 name="X"
                 rightIcon={iconImages.ArrowRight}
                 alias="(Twitter)"
+                href="https://x.com/1cDream"
               />
               <ProfilesItem
                 leftIcon={iconImages.Telegram}
                 name="Telegram"
                 rightIcon={iconImages.ArrowRight}
+                href="https://t.me/CENT_1CENTDREAM"
               />
               <ProfilesItem
                 leftIcon={iconImages.Read}

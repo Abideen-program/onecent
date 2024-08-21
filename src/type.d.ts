@@ -18,4 +18,11 @@ interface ProfileItem {
   name: string;
   rightIcon: any;
   alias?: string;
+  href?: string;
+}
+
+interface LanguageItem {
+  name: string;
+  handleChange: () => any;
+  selectedLanguage: string;
 }
