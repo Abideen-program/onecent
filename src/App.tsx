@@ -5,6 +5,7 @@ import Tasks from "./components/Tasks/Tasks";
 import Freinds from "./components/Friends/Freinds";
 import Profiles from "./components/Profiles/Profiles";
 import Languages from "./components/Profiles/Languages";
+import Play from "./components/Play/Play";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const App = () => {
       //   },
       // ],
     },
+    { path: "/play", element: <Play /> },
     { path: "/tasks", element: <Tasks /> },
     { path: "/friends", element: <Freinds /> },
     { path: "/profiles", element: <Profiles /> },

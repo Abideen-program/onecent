@@ -15,7 +15,23 @@ const Navigators = () => {
             className={`w-[40px] h-[40px] rounded-lg flex items-center justify-center bg-[#222222]`}
           >
             <img
-              src={pathname === "/" ? iconImages.GameActive : iconImages.Game}
+              src={pathname === "/" ? iconImages.Cent : iconImages.Cent}
+              className="w-6"
+              alt="game"
+            />
+          </motion.div>
+        </Link>
+        <p className="text-xs font-medium">Earn</p>
+      </div>
+
+      <div className="flex flex-col items-center gap-1">
+        <Link to="/play">
+          <motion.div
+            whileTap={{ scale: 0.9 }}
+            className={`w-[40px] h-[40px] rounded-lg flex items-center justify-center bg-[#222222]`}
+          >
+            <img
+              src={pathname === "/play" ? iconImages.GameActive : iconImages.Game}
               className="w-6"
               alt="game"
             />

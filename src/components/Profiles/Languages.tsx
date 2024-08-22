@@ -4,7 +4,6 @@ import LanguageItem from "./LanguageItem";
 
 const Languages = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
-  console.log(selectedLanguage);
 
   return (
     <div className="flex justify-center">
