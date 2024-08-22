@@ -28,11 +28,19 @@ export const levelMinPoints = [
 
 export const tasks = [
   {
-    id: 1,
+    id: 0,
     name: "Buy CENT on ShibaSwap",
     status: "notStarted",
     icon: iconImages.Shib,
     point: 500,
+  },
+
+  {
+    id: 1,
+    name: "Create Post on X",
+    status: "notStarted",
+    icon: iconImages.X,
+    point: 1000,
   },
 
   {
